@@ -1,0 +1,1 @@
+{\n  "headers": {\n    "X-Content-Type-Options": {\n      "value": "nosniff"\n    },\n    "X-Frame-Options": {\n      "value": "DENY"\n    },\n    "X-XSS-Protection": {\n      "value": "1; mode=block"\n    },\n    "Strict-Transport-Security": {\n      "value": "max-age=63072000; includeSubDomains; preload"\n    }\n  }\n}
