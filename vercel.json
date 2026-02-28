@@ -1,1 +1,25 @@
-{\n  "headers": {\n    "X-Content-Type-Options": {\n      "value": "nosniff"\n    },\n    "X-Frame-Options": {\n      "value": "DENY"\n    },\n    "X-XSS-Protection": {\n      "value": "1; mode=block"\n    },\n    "Strict-Transport-Security": {\n      "value": "max-age=63072000; includeSubDomains; preload"\n    }\n  }\n}
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ]
+}
