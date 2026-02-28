@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MapPin, Phone, Mail, ChevronDown, ArrowRight, Trees, Waves, Mountain, Star, Menu, X, Download, Quote } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 import './index.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -1396,6 +1397,7 @@ export default function App() {
       <Protocol />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   )
 }
