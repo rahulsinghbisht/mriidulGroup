@@ -5,10 +5,10 @@ export default function SEO() {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "name": "Mriidul Group",
-    "image": "https://mriidulgroups.com/assets/dishaa-forest/hero1.jpg",
+    "image": "https://mriidulgroup.com/assets/dishaa-forest/hero1.jpg",
     "description": "Premium plotted developments in Uttarakhand. Over 20 years of legacy delivering secure, dispute-free land investments.",
-    "url": "https://mriidulgroups.com",
-    "telephone": "+919629091009",
+    "url": "https://mriidulgroup.com",
+    "telephone": "+917830480000",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Uttarakhand",
@@ -20,8 +20,8 @@ export default function SEO() {
       "longitude": 79.0193
     },
     "sameAs": [
-      "https://www.facebook.com/mriidulgroups",
-      "https://www.instagram.com/mriidulgroups"
+      "https://www.facebook.com/mriidulgroup",
+      "https://www.instagram.com/mriidulgroup"
     ]
   }
 
@@ -35,17 +35,17 @@ export default function SEO() {
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://mriidulgroups.com/" />
+      <meta property="og:url" content="https://mriidulgroup.com/" />
       <meta property="og:title" content="Mriidul Group | Premium Land Investment in Uttarakhand" />
       <meta property="og:description" content="Secure your legacy with Mriidul Group. 20+ years of trust offering premium, dispute-free plotted developments in Uttarakhand." />
-      <meta property="og:image" content="https://mriidulgroups.com/assets/dishaa-forest/hero1.jpg" />
+      <meta property="og:image" content="https://mriidulgroup.com/assets/dishaa-forest/hero1.jpg" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://mriidulgroups.com/" />
+      <meta property="twitter:url" content="https://mriidulgroup.com/" />
       <meta property="twitter:title" content="Mriidul Group | Premium Land Investment in Uttarakhand" />
       <meta property="twitter:description" content="Secure your legacy with Mriidul Group. 20+ years of trust offering premium, dispute-free plotted developments in Uttarakhand." />
-      <meta property="twitter:image" content="https://mriidulgroups.com/assets/dishaa-forest/hero1.jpg" />
+      <meta property="twitter:image" content="https://mriidulgroup.com/assets/dishaa-forest/hero1.jpg" />
 
       {/* Structured Data */}
       <script type="application/ld+json">

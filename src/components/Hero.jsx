@@ -76,7 +76,6 @@ export default function Hero() {
             <span className="font-mono-custom text-cream/70 text-xs tracking-widest uppercase">Uttarakhand</span>
           </div>
 
-          {/* Headline Rewrite */}
           <h1 className="hero-animate mb-5" style={{ lineHeight: 1.05 }}>
             <span className="block font-heading font-bold text-cream text-4xl md:text-6xl lg:text-7xl tracking-tight">
               A Legacy Built
@@ -106,7 +105,7 @@ export default function Hero() {
               <ArrowRight size={16} className="relative z-10" />
             </button>
             <a
-              href="tel:+919629091009"
+              href="tel:+917830480000"
               className="flex items-center gap-2 text-cream hover:text-clay text-sm font-sans transition-colors py-2"
             >
               <div className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center bg-cream/5 backdrop-blur-sm">
