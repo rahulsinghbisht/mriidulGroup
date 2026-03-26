@@ -24,9 +24,3 @@ dist-ssr
 *.sw?
 *.mp4 
 
-# Large project images - store separately (CDN/drive)
-public/assets/dishaa-forest/*.jpg
-public/assets/dishaa-greens/*.jpg
-public/assets/dishaa-greens/*.png
-public/assets/lake-paradise/*.jpg
-public/assets/pine-oak/*.jpg
