@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Noise Overlay ─────────────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #F2F0E9;
+  color: #1A1A1A;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────── */
+.font-drama {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-mono-custom {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ─── Magnetic Button ────────────────────────────────────────────── */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+.btn-magnetic .btn-bg {
+  position: absolute;
+  inset: 0;
+  transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.btn-magnetic:hover .btn-bg {
+  transform: translateY(0);
+}
+
+.btn-magnetic span.btn-label {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Link hover lift ────────────────────────────────────────────── */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F0E9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2E4036;
+  border-radius: 3px;
+}
+
+/* ─── Section reveal base ────────────────────────────────────────── */
+.reveal-word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* ─── Cards ──────────────────────────────────────────────────────── */
+.project-card {
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 64px rgba(46, 64, 54, 0.2);
+}
+
+/* ─── Blinking cursor ────────────────────────────────────────────── */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ─── Pulsing dot ────────────────────────────────────────────────── */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ─── Card spring bounce ─────────────────────────────────────────── */
+@keyframes spring-up {
+  0% {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ─── SVG Waveform ───────────────────────────────────────────────── */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ─── Counter ────────────────────────────────────────────────────── */
+.stat-counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Hero gradient ──────────────────────────────────────────────── */
+.hero-overlay {
+  background: linear-gradient(to top,
+      rgba(26, 26, 26, 0.92) 0%,
+      rgba(46, 64, 54, 0.6) 40%,
+      rgba(46, 64, 54, 0.1) 100%);
+}
+
+/* ─── Protocol sticky cards ──────────────────────────────────────── */
+.protocol-card {
+  will-change: transform, filter, opacity;
+}
+
+/* ─── Gallery image hover ────────────────────────────────────────── */
+.gallery-img {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* ─── Navbar ─────────────────────────────────────────────────────── */
+.navbar-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Form inputs ────────────────────────────────────────────────── */
+.form-input {
+  background: rgba(242, 240, 233, 0.1);
+  border: 1px solid rgba(242, 240, 233, 0.25);
+  border-radius: 1rem;
+  color: #F2F0E9;
+  padding: 0.875rem 1.25rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(242, 240, 233, 0.45);
+}
+
+.form-input:focus {
+  border-color: #CC5833;
+  background: rgba(242, 240, 233, 0.15);
+}
+
+select.form-input option {
+  background: #1A1A1A;
+  color: #F2F0E9;
+}
+
+/* ─── Custom Cursor ──────────────────────────────────────────────── */
+.custom-cursor {
+  width: 12px;
+  height: 12px;
+  background: #CC5833;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: normal;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-cursor-inner {
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(204, 88, 51, 0.5);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.custom-cursor.hovered {
+  width: 50px;
+  height: 50px;
+  background: rgba(204, 88, 51, 0.15);
+}
+
+.custom-cursor.hovered .custom-cursor-inner {
+  inset: 0;
+  border: 1px solid #CC5833;
+}
+
+@media (max-width: 1024px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* ─── Marquee ────────────────────────────────────────────────────── */
+.marquee-container {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Modal Overlay ──────────────────────────────────────────────── */
+.modal-overlay {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(12px);
+}

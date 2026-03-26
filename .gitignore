@@ -1,0 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.mp4 
+
+# Large project images - store separately (CDN/drive)
+public/assets/dishaa-forest/*.jpg
+public/assets/dishaa-greens/*.jpg
+public/assets/dishaa-greens/*.png
+public/assets/lake-paradise/*.jpg
+public/assets/pine-oak/*.jpg
